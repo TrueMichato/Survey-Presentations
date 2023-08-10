@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homebrew Survey - Results</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #005E66;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      /* background-image: url('https://cdn.discordapp.com/attachments/255510966563897344/774569578688675859/pngfind.com-gold-divider-png-762187.png');
+      background-size: contain; */
+    }
+
+    header h1 {
+      bottom: 0px; 
+      color: #ebb064
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .slide {
+      padding: 30px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .slide h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .slide p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .plot-container {
+      margin-top: 30px;
+    }
+
+    .plot {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+      background-color: #f8f8f8;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      display: block;
+      width: 1150px;
+      height: 600px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    /* Custom button styles (optional) */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #005E66;
+      color: #ebb064;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ebb064;
+    }
+
+    /* Tooltip styles */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      color: #761213;
+      font-weight: bold;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      font-weight: normal;
+    }
+
+    /*Progress Bar */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #ccc;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #ebb064;
+      width: 0;
+      transition: width 0.3s ease;
+    }
+
+    /* Expandable Container*/
+
+    .expandable-container {
+      display: none;
+      padding: 0px;
+      border: 0px solid #ccc;
+      border-radius: 0px;
+      background-color: #f8f8f8;
+    }
+
+    .expandable-container.show {
+      display: block;
+    }
+
+    .expandable-container iframe {
+      /* Define your custom styles for the plots inside expandable containers here */
+      display: block;
+      object-fit: fill;
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Homebrew Survey - Results</h1>
+  </header>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="slide">
+      <h2>Preface</h2>
+      <p>So, thanks for taking part in the homebrew survey.
+        Your input is very helpful for me, not just in deciding what I will work on first,
+        but also in making me understand which ideas need more work and flashing out.<br>
+        I thought what is the best way to present the results of the survey to you, and decided that
+        this page was an interesting idea, so I hope you like it :)
+      </p>
+    </div>
+
+    <div class="slide">
+      <h2>Results</h2>
+      <p>There have been many way to decide what the actual results are.
+        They are mostly boring if you don't care about numbers,
+        so here I tried to keep the explanations to a minimum.
+      </p>
+      <p>That being said, some understanding of the process is necessary for understanding the results.<br>
+        Each homebrew was given a final score taking into account the 
+        <span class="tooltip">
+          <span class="tooltiptext">'Intresting', 'Special / Original', 'Fun', 'Include in our Game', 'Depth'</span>
+          <span class="term">5 criteria</span>
+        </span>,
+        with each criteria having a different weight to it.
+        <br> I had many choices for weighting each criteria, but mostly changed the weight of the "Special / Original"
+        criteria.
+        The final formula used is given as the title of the plot.
+      </p>
+      <div class="plot-container">
+        <h3>Plot 1 - Chosen Formula</h3>
+        <p>Here, I opted to give very little weight to how original you precived the homebrew as, since it's not a very
+          important factor in my opinion.<br>
+          Its also the final results, so if thats all you care about - congrats, you got it! </p>
+        <div class="plot">
+          <iframe title="Final Plot" , src="Final_Formula_3.html"></iframe>
+        </div>
+      </div>
+      <p>
+        So, what do I make of these results?<br>
+        First, Heroic Soul was much better recived than I expected. Thats very cool, as I like the idea very much, but thought I'll
+        be the only one for some reason.<br>
+        Next is a suprise - Weapons sucking is somthing I am quite passionate about, but never expected to score high in the survey, 
+        and never at second place! Being devoid of lore and mainly about dry mechanics was the reson for this pessimisem.
+        I guess that the current situation is so boring that fixing it gives the idea all the glamour it needs :)<br>
+        Prestige Classes and Oath of Inquisition scoring high is not surprising, as both seem to be interesting from mechanics, lore, and gameplay perspectives.<br>
+        The fact that Oath of Corrosion scored high is somewhat surprising to me, but it might be due to it giving a "dark" twist to what paladin are.<br>
+        How high Way of Five Animals is was another surprise for me - I mean, I like martial arts, and monks, but who knew you guys did as well?<br>
+        The result for Skill Based BA is a surprise from the other direction, as I thought more bonus actions, and ones that relate to skills so 
+        are available to everyone, would be a no brainer. I wonder if the got a low score because of a miscomunication of the idea, 
+        or simply because they are less exciting than some other options (though, lower than <b>Cross Breeding?</b> Seriously?)<br>
+        The result of both warlock subclasses is another unforseen event by me, as I always had the thought that warlocks are the "cool kid class", 
+        and that any idea for subclasses there would be well recived. Guess I found my bias, right?<br>
+        Effect of Aging being so low is sad, but expected. The idea needs lots of work to be both fun and playable, and the result mirrors that.<br>
+        Last result I wanted to talk about is the Devil Sorcerer - this one baffles me. Like, is it so much worse than Fey? Why? 
+        There is a canonic angel one (Divine Soul) that is well liked, what's so wrong about a devil one? Whats so wrong about devil Sorcerer that it is by far the least liked option? 
+        I didn't expect it to be very high, but so low? Just wondering, let me know why you hate devils.<br><br>
+        Next, some other options for what the final result could have been, if you are interested.
+      </p>
+      <button class="btn" onclick="toggleExpand('plot1Container')">Expand Alternative Formulas Plots</button>
+      <div class="expandable-container" id="plot1Container">
+        <div class="plot-container">
+          <h3>Plot 2 - Some Weight to Originality</h3>
+          <div class="plot">
+            <iframe title="Optional Plot 1" , src="Final_Formula_2.html"></iframe>
+          </div>
+          <h3>Plot 3 - Maybe More Weight to Originality?</h3>
+          <div class="plot">
+            <iframe title="Optional Plot 2" , src="Final_Formula_1.html"></iframe>
+          </div>
+          <h3>Plot 4 - OK, More Weight to Originality, But Thats It!</h3>
+          <div class="plot">
+            <iframe title="Optional Plot 3" , src="Final_Formula_0.html"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide">
+      <h2>Perliminary Analysis</h2>
+      <p>So, from here on we will talk about the nitty gritty of how the Analysis was done.
+        Many numbers follow, but not too many, don't worry.</p>
+
+      <h3>The Process</h3>
+      <p>So, what did I actually do?<br>
+        The analysis had 3 main stages (some with sub stages):</p>
+      <ol>
+        <li><b>Data processing and scoring:</b> The code processes the survey data to calculate scores for each homebrew
+          idea based on the specified features. It iterates through each "feature" in ['Intresting', 'Special /
+          Original', 'Fun', 'Include in our Game', 'Depth'] and performs the following steps:
+          <ol type="a">
+            <li>If the current feature is 'Fun' or 'Include in our Game', it checks for really low scores (1 or 2) and
+              prints a message about the number of such cases.</li>
+            <li>Calculates the average and
+              <span class="tooltip">
+                <span class="tooltiptext">Basically, how different were the answers from each other</span>
+                <span class="term">standard deviation </span>
+              </span>
+              for each idea's ratings on the current feature and computes a
+              <span class="tooltip">
+                <span class="tooltiptext">average - standard deviation, and a normalization to make it a
+                  percentage</span>
+                <span class="term"> normalized score. </span>
+              </span>
+            </li>
+            <li>Creates two bar charts using plotly: one for the average rating with error bars and the other for the
+              normalized score. The charts are saved and will be shown below.</li>
+          </ol>
+        </li>
+
+        <li><b>Checking multiple scoring formulas:</b> The code defines four different scoring formulas (formula_A,
+          formula_B,
+          formula_C, and formula_D). These formulas assign weights to each feature (Include, Fun, Depth, Intresting, and
+          Special) to calculate a final score for each homebrew idea.</li>
+        <li><b>Final scoring and visualization:</b>The code iterates through each scoring formula and calculates the
+          final score for
+          each homebrew idea using that formula. It then creates a bar chart using plotly to display the final scores
+          for
+          each idea based on the current formula. These are the results shown above.</li>
+      </ol>
+      <p>following are the plots generated during the analysis.</p>
+      <button class="btn" onclick="toggleExpand('Intrestingplots')">Expand 'Intresting' Plots</button>
+      <div class="expandable-container" id="Intrestingplots">
+        <div class="plot-container">
+          <h2>Intresting</h2>
+          <h3>Average Score with <span class="tooltip">
+              <span class="tooltiptext">Based on how different were the answers from each other, bigger bar means the
+                result is "less sure"</span>
+              <span class="term">Error Bars</span>
+            </span></h3>
+          <div class="plot">
+            <iframe title="Intresting AVG" , src="Intresting  Average Rating with error bars.html"></iframe>
+          </div>
+          <h3>Normalized Score</h3>
+          <div class="plot">
+            <iframe title="Intresting Normalized" , src="Intresting Normalized Score.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="toggleExpand('IncludePlots')">Expand 'Include in our Game' Plots</button>
+      <div class="expandable-container" id="IncludePlots">
+        <div class="plot-container">
+          <h2>Intresting</h2>
+          <h3>Average Score with <span class="tooltip">
+              <span class="tooltiptext">Based on how different were the answers from each other, bigger bar means the
+                result is "less sure"</span>
+              <span class="term">Error Bars</span>
+            </span></h3>
+          <div class="plot">
+            <iframe title="Include AVG" , src="Include in our Game  Average Rating with error bars.html"></iframe>
+          </div>
+          <h3>Normalized Score</h3>
+          <div class="plot">
+            <iframe title="Include Normalized" , src="Include in our Game  Normalized Score.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="toggleExpand('DepthPlots')">Expand 'Depth' Plots</button>
+      <div class="expandable-container" id="DepthPlots">
+        <div class="plot-container">
+          <h2>Depth</h2>
+          <h3>Average Score with <span class="tooltip">
+              <span class="tooltiptext">Based on how different were the answers from each other, bigger bar means the
+                result is "less sure"</span>
+              <span class="term">Error Bars</span>
+            </span></h3>
+          <div class="plot">
+            <iframe title="Include AVG" , src="Depth  Average Rating with error bars.html"></iframe>
+          </div>
+          <h3>Normalized Score</h3>
+          <div class="plot">
+            <iframe title="Include Normalized" , src="Depth  Normalized Score.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="toggleExpand('SpecialPlots')">Expand 'Special / Original' Plots</button>
+      <div class="expandable-container" id="SpecialPlots">
+        <div class="plot-container">
+          <h2>Special / Original</h2>
+          <h3>Average Score with <span class="tooltip">
+              <span class="tooltiptext">Based on how different were the answers from each other, bigger bar means the
+                result is "less sure"</span>
+              <span class="term">Error Bars</span>
+            </span></h3>
+          <div class="plot">
+            <iframe title="Include AVG" , src="Special or Original  Average Rating with error bars.html"></iframe>
+          </div>
+          <h3>Normalized Score</h3>
+          <div class="plot">
+            <iframe title="Include Normalized" , src="Special or Original  Normalized Score.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="toggleExpand('FunPlots')">Expand 'Fun' Plots</button>
+      <div class="expandable-container" id="FunPlots">
+        <div class="plot-container">
+          <h2>Fun</h2>
+          <h3>Average Score with <span class="tooltip">
+              <span class="tooltiptext">Based on how different were the answers from each other, bigger bar means the
+                result is "less sure"</span>
+              <span class="term">Error Bars</span>
+            </span></h3>
+          <div class="plot">
+            <iframe title="Include AVG" , src="Fun  Average Rating with error bars.html"></iframe>
+          </div>
+          <h3>Normalized Score</h3>
+          <div class="plot">
+            <iframe title="Include Normalized" , src="Fun  Normalized Score.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <p>Aside from those, the analysis also generated warnings for low scores. The warnings were:<br>
+        <code>
+          Got 1 case of really low 'Fun' score in Effect of Aging<br>
+          Got 1 case of really low 'Fun' score in Multiclassing Overhaul<br>
+          Got 1 case of really low 'Fun' score in Wizard - School of Smoke<br>
+          Got 1 case of really low 'Include in our Game' score in Effect of Aging<br>
+          Got 1 case of really low 'Include in our Game' score in Barbarian - Path of the Spellshield<br>
+        </code>
+      </p>
+      <p>Given more time, I would have given some more weight to these specific low scores in the analysis -
+        if its extremely not fun, or extremely not something you would want in the game, I want the results to mirror that,
+        since those are 2 really important factors. 
+        <br>As it is, I think the results reflect these sentiments anyway, so no harm done. 
+        <br><br>
+        But let's talk about what I can learn from these really low scores, as it can be interesting:
+        <ul>
+          <li>Effect of Aging seems to be very poorly recived on both accounts. I would wager this has to do with some problem in how I presented it,
+            since the 1st edition rules provided as an example seem very harsh and unforgiving (as was 1st edition). 
+            <br> As mentioned in the first part, I think they need a substantial amount of work to make them work, but these results
+            also emphasize that there need to be some extra care taken to make sure they are presented in a way that will seem appealing.
+          </li>
+          <li>
+            Path of the Spellshield gets a low score, and I think the main issue with it is that its role and lore aren't very clear.
+            The idea of an anti spellcaster warrior is very well liked (just look at the result of oath of inquisition), 
+            so the main takeaway here is that more explanations were needed to fully portray the fantasy this subclass embodies.
+          </li>
+          <li>
+            The last interesting result is low fun score for Multiclassing. I think this makes perfect sense - going to the doctor isn't fun,
+            but necessary. This is something that the game needs, but giving it a low fun score makes sense.
+          </li>
+        </ul>
+      </p>
+
+    </div>
+
+    <!-- Add more slides and plots as needed -->
+
+    <div class="slide">
+      <p>And thats about it. Thanks for your help, and see you at the next survey:)</p>
+      <button class="btn" onclick="openExpandableContainer('Final_Formula_0.html')">Expand Plot 1</button>
+    </div>
+  </div>
+
+  <script>
+
+
+    // JavaScript code for the progress bar
+    const progressBar = document.getElementById('progressBar');
+    var totalHeight = document.body.scrollHeight - window.innerHeight;
+
+    window.onscroll = function () {
+      updateBar();
+    };
+
+    // Function to update progress bar
+    function updateBar() {
+      const progress = (window.pageYOffset / totalHeight) * 100;
+      progressBar.style.width = progress + '%';
+    }
+    // Function to update the total height when an expandable container is toggled
+    function updateTotalHeight() {
+      totalHeight = document.body.scrollHeight - window.innerHeight;
+      updateBar();
+    }
+
+    // Function to run when the page is fully loaded
+    window.onload = function () {
+      // Update the total height once all elements are loaded
+      updateTotalHeight();
+    };
+
+    // JavaScript function to toggle the visibility of an expandable container
+    // function toggleExpand(containerId) {
+    //   const container = document.getElementById(containerId);
+    //   container.classList.toggle('show');
+
+    //   // Update the total height when an expandable container is toggled
+    //   updateTotalHeight();
+    // }
+
+    function openExpandableContainer(url) {
+      // Open a new popup window with the specified URL
+      const popup = window.open(url, '_blank', 'width=1150, height=600');
+      // Focus the new popup window
+      if (popup) {
+        popup.focus();
+      }
+    }
+  </script>
+</body>
+
+</html>
