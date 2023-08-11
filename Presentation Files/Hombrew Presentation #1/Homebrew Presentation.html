@@ -5,163 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homebrew Survey - Results</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-    }
-
-    header {
-      background-color: #005E66;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      /* background-image: url('https://cdn.discordapp.com/attachments/255510966563897344/774569578688675859/pngfind.com-gold-divider-png-762187.png');
-      background-size: contain; */
-    }
-
-    header h1 {
-      bottom: 0px; 
-      color: #ebb064
-    }
-
-    .container {
-      max-width: 1250px;
-      margin: 20px auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .slide {
-      padding: 30px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .slide h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .slide p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .plot-container {
-      margin-top: 30px;
-    }
-
-    .plot {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 20px;
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    iframe {
-      display: block;
-      width: 1150px;
-      height: 600px;
-      border: none;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-
-    /* Custom button styles (optional) */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #005E66;
-      color: #ebb064;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #ebb064;
-    }
-
-    /* Tooltip styles */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-      color: #761213;
-      font-weight: bold;
-    }
-
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 200px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 8px;
-      position: absolute;
-      z-index: 1;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-      font-weight: normal;
-    }
-
-    /*Progress Bar */
-    .progress-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background-color: #ccc;
-    }
-
-    .progress-bar {
-      height: 100%;
-      background-color: #ebb064;
-      width: 0;
-      transition: width 0.3s ease;
-    }
-
-    /* Expandable Container*/
-
-    .expandable-container {
-      display: none;
-      padding: 0px;
-      border: 0px solid #ccc;
-      border-radius: 0px;
-      background-color: #f8f8f8;
-    }
-
-    .expandable-container.show {
-      display: block;
-    }
-
-    .expandable-container iframe {
-      /* Define your custom styles for the plots inside expandable containers here */
-      display: block;
-      object-fit: fill;
-      border: none;
-      border-radius: 4px;
-      margin-top: 10px;
-
-    }
-  </style>
+  <link rel="stylesheet" href="../src/presentation_css.css">
+  <script type="text/javascript" src="../src/presentation_code.js"></script>
 </head>
 
 <body>
@@ -207,7 +52,7 @@
           important factor in my opinion.<br>
           Its also the final results, so if thats all you care about - congrats, you got it! </p>
         <div class="plot">
-          <iframe title="Final Plot" , src="Final_Formula_3.html"></iframe>
+          <iframe title="Final Plot" , src="Plots/Final_Formula_3.html"></iframe>
         </div>
       </div>
       <p>
@@ -236,15 +81,15 @@
         <div class="plot-container">
           <h3>Plot 2 - Some Weight to Originality</h3>
           <div class="plot">
-            <iframe title="Optional Plot 1" , src="Final_Formula_2.html"></iframe>
+            <iframe title="Optional Plot 1" , src="Plots/Final_Formula_2.html"></iframe>
           </div>
           <h3>Plot 3 - Maybe More Weight to Originality?</h3>
           <div class="plot">
-            <iframe title="Optional Plot 2" , src="Final_Formula_1.html"></iframe>
+            <iframe title="Optional Plot 2" , src="Plots/Final_Formula_1.html"></iframe>
           </div>
           <h3>Plot 4 - OK, More Weight to Originality, But Thats It!</h3>
           <div class="plot">
-            <iframe title="Optional Plot 3" , src="Final_Formula_0.html"></iframe>
+            <iframe title="Optional Plot 3" , src="Plots/Final_Formula_0.html"></iframe>
           </div>
         </div>
       </div>
@@ -304,11 +149,11 @@
               <span class="term">Error Bars</span>
             </span></h3>
           <div class="plot">
-            <iframe title="Intresting AVG" , src="Intresting  Average Rating with error bars.html"></iframe>
+            <iframe title="Intresting AVG" , src="Plots/Intresting  Average Rating with error bars.html"></iframe>
           </div>
           <h3>Normalized Score</h3>
           <div class="plot">
-            <iframe title="Intresting Normalized" , src="Intresting Normalized Score.html"></iframe>
+            <iframe title="Intresting Normalized" , src="Plots/Intresting Normalized Score.html"></iframe>
           </div>
         </div>
       </div>
@@ -322,11 +167,11 @@
               <span class="term">Error Bars</span>
             </span></h3>
           <div class="plot">
-            <iframe title="Include AVG" , src="Include in our Game  Average Rating with error bars.html"></iframe>
+            <iframe title="Include AVG" , src="Plots/Include in our Game  Average Rating with error bars.html"></iframe>
           </div>
           <h3>Normalized Score</h3>
           <div class="plot">
-            <iframe title="Include Normalized" , src="Include in our Game  Normalized Score.html"></iframe>
+            <iframe title="Include Normalized" , src="Plots/Include in our Game  Normalized Score.html"></iframe>
           </div>
         </div>
       </div>
@@ -340,11 +185,11 @@
               <span class="term">Error Bars</span>
             </span></h3>
           <div class="plot">
-            <iframe title="Include AVG" , src="Depth  Average Rating with error bars.html"></iframe>
+            <iframe title="Include AVG" , src="Plots/Depth  Average Rating with error bars.html"></iframe>
           </div>
           <h3>Normalized Score</h3>
           <div class="plot">
-            <iframe title="Include Normalized" , src="Depth  Normalized Score.html"></iframe>
+            <iframe title="Include Normalized" , src="Plots/Depth  Normalized Score.html"></iframe>
           </div>
         </div>
       </div>
@@ -358,11 +203,11 @@
               <span class="term">Error Bars</span>
             </span></h3>
           <div class="plot">
-            <iframe title="Include AVG" , src="Special or Original  Average Rating with error bars.html"></iframe>
+            <iframe title="Include AVG" , src="Plots/Special or Original  Average Rating with error bars.html"></iframe>
           </div>
           <h3>Normalized Score</h3>
           <div class="plot">
-            <iframe title="Include Normalized" , src="Special or Original  Normalized Score.html"></iframe>
+            <iframe title="Include Normalized" , src="Plots/Special or Original  Normalized Score.html"></iframe>
           </div>
         </div>
       </div>
@@ -376,11 +221,11 @@
               <span class="term">Error Bars</span>
             </span></h3>
           <div class="plot">
-            <iframe title="Include AVG" , src="Fun  Average Rating with error bars.html"></iframe>
+            <iframe title="Include AVG" , src="Plots/Fun  Average Rating with error bars.html"></iframe>
           </div>
           <h3>Normalized Score</h3>
           <div class="plot">
-            <iframe title="Include Normalized" , src="Fun  Normalized Score.html"></iframe>
+            <iframe title="Include Normalized" , src="Plots/Fun  Normalized Score.html"></iframe>
           </div>
         </div>
       </div>
@@ -416,7 +261,6 @@
           </li>
         </ul>
       </p>
-
     </div>
 
     <!-- Add more slides and plots as needed -->
@@ -426,10 +270,7 @@
       <button class="btn" onclick="openExpandableContainer('Final_Formula_0.html')">Expand Plot 1</button>
     </div>
   </div>
-
   <script>
-
-
     // JavaScript code for the progress bar
     const progressBar = document.getElementById('progressBar');
     var totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -437,41 +278,6 @@
     window.onscroll = function () {
       updateBar();
     };
-
-    // Function to update progress bar
-    function updateBar() {
-      const progress = (window.pageYOffset / totalHeight) * 100;
-      progressBar.style.width = progress + '%';
-    }
-    // Function to update the total height when an expandable container is toggled
-    function updateTotalHeight() {
-      totalHeight = document.body.scrollHeight - window.innerHeight;
-      updateBar();
-    }
-
-    // Function to run when the page is fully loaded
-    window.onload = function () {
-      // Update the total height once all elements are loaded
-      updateTotalHeight();
-    };
-
-    // JavaScript function to toggle the visibility of an expandable container
-    // function toggleExpand(containerId) {
-    //   const container = document.getElementById(containerId);
-    //   container.classList.toggle('show');
-
-    //   // Update the total height when an expandable container is toggled
-    //   updateTotalHeight();
-    // }
-
-    function openExpandableContainer(url) {
-      // Open a new popup window with the specified URL
-      const popup = window.open(url, '_blank', 'width=1150, height=600');
-      // Focus the new popup window
-      if (popup) {
-        popup.focus();
-      }
-    }
   </script>
 </body>
 
