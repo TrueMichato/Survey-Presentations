@@ -17,8 +17,8 @@
 
     // JavaScript function to toggle the visibility of an expandable container
     function toggleExpand(containerId) {
-      const container = document.getElementById(containerId);
-      container.classList.toggle('show');
+      var container = document.getElementById(containerId);
+      container.classList.toggle('hide');
 
       // Update the total height when an expandable container is toggled
       updateTotalHeight();
