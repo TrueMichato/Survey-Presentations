@@ -40,15 +40,19 @@ for title in FEATURES:
     data_df['stdv'] = temp_df.std()
     data_df['score'] = data_df.means - data_df.stdv
     data_df['score'] = data_df.score / data_df.score.sum() * 100
-    fig1 = px.bar(data_df, x=data_df.index.to_numpy(), y="means", color="means", error_y="stdv",
+    fig1 = px.bar(data_df, x=data_df.index.to_numpy(), y="means", color="means", error_y="stdv", text_auto='.3s',
            labels=data_df.index.to_numpy(),
            title=f"{title} - Average Rating with error bars")
-    # fig1.write_html(f"Presentation Files/Homebrew Survey #1/Plots/{title if '/' not in title else title.replace('/', 'or')} Average Rating with error bars.html")
+    fig1.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+    # fig1.show()
+    fig1.write_image(f"Presentation Files/Hombrew Presentation 1/Plots/{title if '/' not in title else title.replace('/', 'or')} Average Rating with error bars.webp")
     data_df.sort_values(by='score', inplace=True)
-    fig2 = px.bar(data_df, x=data_df.index.to_numpy(),  y="score", color="score",
+    fig2 = px.bar(data_df, x=data_df.index.to_numpy(),  y="score", color="score", text_auto='.3s',
            labels=data_df.index.to_numpy(),
            title=f"{title} - Normalized Score")
-    # fig2.write_html(f"Presentation Files/Homebrew Survey #1/Plots/{title if '/' not in title else title.replace('/', 'or')}  Normalized Score.html")
+    fig2.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+    # fig2.show()
+    fig2.write_image(f"Presentation Files/Hombrew Presentation 1/Plots/{title if '/' not in title else title.replace('/', 'or')} Normalized Score.webp")
     if score_df.index.empty:
         score_df.index = data_df.index
     score_df[title] = data_df.score
@@ -63,9 +67,7 @@ formula_D = {"Include": 1, "Fun": 0.9, "Depth": 0.7, "Intresting": 0.5, "Special
 formula_list = [formula_A, formula_B, formula_C, formula_D]
 
 for i, formula in enumerate(formula_list):
-    title = f"""{formula['Include']} * 'Include in our Game' + {formula['Fun']} * Fun + 
-            {formula['Depth']} * Depth + {formula['Intresting']} * Intresting +
-             {formula['Special']} * 'Special / Original'"""
+    title = f"{formula['Include']} * 'Include in our Game' + {formula['Fun']} * Fun + {formula['Depth']} * Depth <br> + {formula['Intresting']} * Intresting + {formula['Special']} * 'Special / Original'"
     score_df['final_score'] = score_df.apply(lambda r: formula['Include'] * r['Include in our Game'] +
                                                        formula['Fun'] * r.Fun + formula['Depth'] * r.Depth +
                                                        formula['Intresting'] * r.Intresting +
@@ -77,7 +79,7 @@ for i, formula in enumerate(formula_list):
                title=f"Final Scores, formula is '{title}'")
     fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
     # fig.show()
-    # fig.write_html(f"Presentation Files/Homebrew Survey #1/Plots/Final_Formula_{i}.html")
+    fig.write_image(f"Presentation Files/Hombrew Presentation 1/Plots/Final_Formula_{i}.webp")
 
 
 
