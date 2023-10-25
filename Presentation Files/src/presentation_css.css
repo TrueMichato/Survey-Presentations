@@ -66,6 +66,17 @@
       margin-top: 10px;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      width: 1150px;
+      /* height: 600px;  */
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
     /* Custom button styles (optional) */
     .btn {
       display: inline-block;
